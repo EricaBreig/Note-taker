@@ -1,13 +1,27 @@
 const router = require("express").Router();
-const store = require("../db/store");
+const { v4: uuidv4 } = require('uuid');
+const {
+    readFromFile,
+    readAndAppend,
+    writeToFile,
+  } = require('../helpers/fsUtils');
 
 router.get("/notes", (req, res) => {
-  res.json("get!");
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 router.post("/notes", (req, res) => {
-  store.addNote(req.body);
-  res.json("post!");
+    const newNote = req.body;
+    newNote.id = uuidv4();
+
+readAndAppend(newNote, './db/db.json');
+res.json(newNote);
 });
+
+router.delete('/notes/:id', (req, res) => {
+    const filteredData = readAndDelete(newNote, './db/db.json');
+    res.json(filteredData);
+})
+
 
 module.exports = router;

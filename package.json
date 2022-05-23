@@ -1,10 +1,11 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Description",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +13,13 @@
     "express": "^4.16.4",
     "nodemon": "^2.0.16",
     "uuid": "^3.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricaBreig/hw-11-note-taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EricaBreig/hw-11-note-taker/issues"
+  },
+  "homepage": "https://github.com/EricaBreig/hw-11-note-taker#readme"
 }
