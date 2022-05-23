@@ -11,8 +11,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 //API ROUTES
-
 app.use("/api", apiRoutes);
 
 //HTML ROUTES
 app.use("/", htmlRoutes);
+
+
+app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+console.log("Visit page here: http://localhost:3001/");
