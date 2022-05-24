@@ -37,4 +37,5 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Mock-Up
 
 The following images show the web application's appearance and functionality:
+![A user clicks on the note taker button, the page changes to another page where notes can be made and saved.](./assets/note-taker.gif)
 
